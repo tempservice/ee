@@ -25,7 +25,7 @@ if getgenv().Loaded == nil then
 		queue = queue .. " getgenv().CONFIG_MESSAGE2 = `" ..getgenv().CONFIG_MESSAGE2 .. "`"
 		queue = queue .. " getgenv().CONFIG_MESSAGE3 = `" ..getgenv().CONFIG_MESSAGE3 .. "`"
 
-		queue = queue .. " loadstring(game:HttpGet('https://raw.githubusercontent.com/tempservice/cs/main/main.lua'))()"
+		queue = queue .. " loadstring(game:HttpGet('https://raw.githubusercontent.com/tempservice/ee/main/main.lua'))()"
 
 		if syn then
 			syn.queue_on_teleport(queue)
