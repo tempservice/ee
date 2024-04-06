@@ -1,6 +1,6 @@
-getgenv().CONFIG_MESSAGE1 = ".gg/jailbreakshop"
-getgenv().CONFIG_MESSAGE1 = ".gg/jailbreakshop ON TOP"
-getgenv().CONFIG_MESSAGE1 = ".gg/jailbreakshop WWW FREE SHIFT"
+local CONFIG_MESSAGE1 = ",gg/jailbreakshop"
+local CONFIG_MESSAGE2 = ",gg/jailbreakshop ON TOP"
+local CONFIG_MESSAGE3 = ",gg/jailbreakshop JOIN UP!!"
 
 if getgenv().Loaded == nil then
 	getgenv().Loaded = true
@@ -10,7 +10,7 @@ if getgenv().Loaded == nil then
 	local ServerHopping = false
 
 	local SpamChat = function()
-		local Messages = {tostring(getgenv().CONFIG_MESSAGE1), tostring(getgenv().CONFIG_MESSAGE2), tostring(getgenv().CONFIG_MESSAGE3)}
+		local Messages = {CONFIG_MESSAGE1, CONFIG_MESSAGE2, CONFIG_MESSAGE3}
 
 		for i = 1, #Messages do
 			task.wait(.15)
@@ -21,11 +21,11 @@ if getgenv().Loaded == nil then
 	end
 
 	local ServerHop = function()
-		queue = queue .. " getgenv().CONFIG_MESSAGE1 = `" ..getgenv().CONFIG_MESSAGE1 .. "`"
-		queue = queue .. " getgenv().CONFIG_MESSAGE2 = `" ..getgenv().CONFIG_MESSAGE2 .. "`"
-		queue = queue .. " getgenv().CONFIG_MESSAGE3 = `" ..getgenv().CONFIG_MESSAGE3 .. "`"
+		queue = queue .. " local CONFIG_MESSAGE1 = `" ..CONFIG_MESSAGE1 .. "`"
+		queue = queue .. " local CONFIG_MESSAGE2 = `" ..CONFIG_MESSAGE2 .. "`"
+		queue = queue .. " local CONFIG_MESSAGE3 = `" ..CONFIG_MESSAGE3 .. "`"
 
-		queue = queue .. " loadstring(game:HttpGet('https://raw.githubusercontent.com/tempservice/ee/main/main.lua'))()"
+		queue = queue .. " loadstring(game:HttpGet('https://raw.githubusercontent.com/tempservice/cs/main/main.lua'))()"
 
 		if syn then
 			syn.queue_on_teleport(queue)
